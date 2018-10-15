@@ -1,0 +1,26 @@
+Regular Expression Basic Pattern
+
+z,y,10 - Ordinary characters just match themselves .
+
+. - matches any single character except newline
+
+w = matches a "word" charcter: a letter or digit or ubderscore[a-zA-Z0-9_].
+	It only matches a single character not a whole word
+
+W = Matches any non-word character
+
+w+= matches one or more words
+
+b = boundry between word and non-word
+
+s = matches a single whitespace character, space , newline , return , tab , form
+
+S = matches any non-white space character
+
+t,n,r = Tab , Newline , Return
+
+D = matches anything but a digit
+
+d = matches a decimal digit[0-9]
+
+d{1,5} = matches a digit between 1 and 5 in length.
