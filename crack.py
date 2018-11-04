@@ -3,7 +3,7 @@ import itertools
 password = "P@ssw0rd#"
 print ("Cracking...")
 start = time.time()
-for test in itertools.product('abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%^&*1234567890', repeat = 7):
+for test in itertools.product('abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%^&*1234567890', repeat = 9):
     print("".join(test))
     if "".join(test) == password:
         stop = time.time()
