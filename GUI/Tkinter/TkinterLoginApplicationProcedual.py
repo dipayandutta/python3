@@ -78,6 +78,9 @@ def HomeWindow():
     root.resizable(0, 0)
 
     Home.geometry("%dx%d+%d+%d" % (width, height, x, y))
+    design()
+
+def design():
     lbl_home = Label(Home, text="Successfully Logedin",
                      font=('times new roman', 20)).pack()
     btn_back = Button(Home, text='Back', command=Back).pack(pady=20, fill=X)
