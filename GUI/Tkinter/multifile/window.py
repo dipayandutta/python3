@@ -26,8 +26,13 @@ class MyLoginApplication:
         self.Form = Frame(self.root,height=200)
         self.Form.pack(side=TOP,pady=20)
 
-        self.TopPanel = topFrame(self.root,self.Top)
-        self.uiPanel  = uiFrame(self.root,self.Form)
+        
+
+        self.TopPanel   = topFrame(self.root,self.Top)
+        self.uiPanel    = uiFrame(self.root,self.Form)
+        #self.loginPanel = Login(self.root,self.Form)
+
+
 
     def start(self):
         self.root.mainloop()

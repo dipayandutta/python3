@@ -1,4 +1,5 @@
 from tkinter import *
+from login import *
 
 class uiFrame:
 
@@ -25,13 +26,15 @@ class uiFrame:
 		
 		btn_lgn = Button(From,text="login",width=45,command=self.get)
 		btn_lgn.grid(pady=25,row=3,columnspan=2)
-		btn_lgn.bind('<Return>',self.get)
+		
 
 	def get(self):
 		user_name = self.USERNAME.get()
 		pass_word = self.PASSWORD.get()
-		print(user_name)
-		print(pass_word)
+		
+
+		lgn = Login(self.root,self.From)
+		lgn.loginLogic(self.USERNAME,self.PASSWORD,user_name,pass_word)
 		
 		
 
