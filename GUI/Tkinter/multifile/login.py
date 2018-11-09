@@ -35,7 +35,7 @@ class Login:
 
             if cursor.fetchone() is not None:
                 print("Login Successful")
-                hWindow = homeWindow(self.root)
+                hWindow = homeWindow()
                 USERNAME.set("")
                 PASSWORD.set("")
                 self.lbl_text.config(text="")

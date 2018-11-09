@@ -1,8 +1,12 @@
 from tkinter import *
+from menu import *
 
 class homeWindow:
 
-	def __init__(self,root):
+	def __init__(self):
+		appMenu = MenuApplication()
+		appMenu.menubar()
+		'''
 		self.root = root
 		global Home
 		
@@ -22,13 +26,26 @@ class homeWindow:
 		self.root.resizable(0,0)
 
 		Home.geometry("%dx%d+%d+%d"%(width,height,x,y))
-
-		self.design()
-
+		'''
+		#self.design()
+'''
 	def design(self):
-		lbl_home = Label(Home,text="Successfully Login",font=('times new roman',20)).pack()
-		btn_back = Button(Home,text='Back',command=self.Back).pack(pady=20,fill=X)
+
+		appMenu.menubar()
+
+	
+
+
+		#lbl_home = Label(Home,text="Successfully Login",font=('times new roman',20)).pack(pady=20)
+		#btn_back = Button(Home,text='Back',command=self.Back).pack(pady=20,fill=X)
+
+		#btn_print = Button(Home,text="CLick",command=self.onClick).pack(pady=20,fill=X)
 
 	def Back(self):
 		Home.destroy()
 		self.root.deiconify()
+
+	def onClick(self):
+		print("Hello World!")
+'''
+	
