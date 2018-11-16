@@ -33,7 +33,16 @@ informationLabel = Label(Tops,font=('arial',60,'bold'),text= "MultiFrame Applica
 informationLabel.grid(row=0,column=0)
 #------------------------------------------FUNCTIONS-------------------------------#
 def weeklyWages():
-    pass
+    hoursWorkedPerWeek = float(HoursWorked.get())
+    wagesPerHours = float(HourlyRate.get())
+
+    payDue = wagesPerHours * hoursWorkedPerWeek
+    paymentDue = "$",str('%.2f'%(payDue))
+    GrossPay/set(paymentDue)
+
+    tax = payDue *0.2
+    taxables = "$",str('%.2f'%(tax))
+    Tax.set(taxables)
 
 def applicationQuit():
     qExit = messagebox.askyesno("MultiFrame Application","Quit Application?")
@@ -58,6 +67,17 @@ def applicationReset():
     txtPaySlip.delete("1.0",END)
 
 def enterInformation():
+    txtPaySlip.insert(END,"\t\tPay Slip\n\n")
+    txtPaySlip.insert(END,"Name\t\t" +Name.get()+"\n\n")
+    txtPaySlip.insert(END,"Address\t\t"+Address.get()+"\n\n")
+    txtPaySlip.insert(END,"Employer\t\t"+Employer.get()+"\n\n")
+    txtPaySlip.insert(END,"NINumber\t\t"+NINumber.get()+"\n\n")
+    txtPaySlip.insert(END,"HoursWorked\t\t"+HoursWorked.get()+"\n\n")
+    txtPaySlip.insert(END,"HourlyRate\t\t"+HourlyRate.get()+"\n\n")
+    txtPaySlip.insert(END,"Tax\t\t"+Tax.get()+"\n\n")
+    txtPaySlip.insert(END,"OverTime\t\t"+OverTime.get()+"\n\n")
+    txtPaySlip.insert(END,"GrossPay\t\t"+GrossPay.get()+"\n\n")
+    txtPaySlip.insert(END,"NetPay\t\t"+NetPay.get()+"\n\n")
     
 #--------------------------------------VARIABLES-----------------------------------#
 Name = StringVar()
