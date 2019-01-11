@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>about Page</h1>
+	<p>{{ my_Text }}</p>
+	<p>{{ my_number }}</p>
+	<p>{{ my_list }}</p>
+	<ul>{% for number in my_list %}
+			<li>{{ forloop.counter }} <b>---></b> {{ number }}</li>
+		{% endfor %}
+	</ul>
+	<p>if else in template</p>
+	<ul>{% for number in my_list %}
+			<p>{% if number == 10 %}
+					<b>Hello World</b>
+				{% endif %}
+			</p>
+		{% endfor %}
+	</ul>
+{% endblock %}
