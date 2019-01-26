@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+</head>
+<body>
+	{{ result_string }} <b>{{ listLength }}</b>
+	<br>
+	<br>
+	<p>
+	<b><u>Text that user given </u></b>
+	</p>
+	<p>{{ input }}</p>
+	<br>
+	
+	<br>
+	<b>
+	<p> Occurance of the words </p>
+	</b>
+	<p>
+		{% for word,occurance in sortedWords %}
+			<table style="width:10%">
+				<tr>
+					<td>{{ word }}</td>
+					<td>{{ occurance }}</td>
+				</tr>
+			</table>						
+		{% endfor %}
+	</p>
+</body>
+</html>

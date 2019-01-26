@@ -1,0 +1,222 @@
+
+
+Wed Jan  9 15:26:58 2019
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.15.0-43-generic (#46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       976773168 sectors
+/dev/sda: user_max   976773168 sectors
+/dev/sda: native_max 976773168 sectors
+/dev/sda: dco        976773168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 500 GB / 465 GiB - CHS 60801 255 63, sector size=512 - TOSHIBA MQ01ABF050, S/N:Z36GSOSHS, FW:AM003M
+Disk /dev/sdc - 15 GB / 14 GiB - CHS 14782 64 32, sector size=512 - TOSHIBA TransMemory, FW:1.00
+
+Partition table type default to Intel
+Disk /dev/sdc - 15 GB / 14 GiB - TOSHIBA TransMemory
+Partition table type: Intel
+
+Analyse Disk /dev/sdc - 15 GB / 14 GiB - CHS 14782 64 32
+Current partition structure:
+
+Partition sector doesn't have the endmark 0xAA55
+
+search_part()
+Disk /dev/sdc - 15 GB / 14 GiB - CHS 14782 64 32
+FAT32 at 0/1/32
+FAT1 : 32-14807
+FAT2 : 14808-29583
+start_rootdir : 29584 root cluster : 2
+Data : 29584-30274207
+sectors : 30274209
+cluster_size : 16
+no_of_cluster : 1890289 (2 - 1890290)
+fat_length 14776 calculated 14768
+FAT differs, FAT sectors=0-16/14776
+heads/cylinder 32 (FAT) != 64 (HD)
+sect/track 63 (FAT) != 32 (HD)
+
+FAT32 at 0/1/32
+     FAT32 LBA                0   1 32 14782  22 32   30274209 [GD_TOSHIBA]
+     FAT32, blocksize=8192, 15 GB / 14 GiB
+Warning: the current number of heads per cylinder is 64 but the correct value may be 255.
+
+Results
+   L FAT32 LBA                0   1 32 14782  22 32   30274209 [GD_TOSHIBA]
+     FAT32, blocksize=8192, 15 GB / 14 GiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 30274209 linear /dev/sdc 63" | dmsetup create test0
+add_ext_part_i386: max
+add_ext_part_i386: min
+
+interface_write()
+ 1 E extended LBA             0   1  1 14782  22 32   30274240
+ 5 L FAT32 LBA                0   1 32 14782  22 32   30274209 [GD_TOSHIBA]
+add_ext_part_i386: max
+
+interface_write()
+ 1 E extended LBA             0   1  1 14782  31 32   30274528
+ 5 L FAT32 LBA                0   1 32 14782  22 32   30274209 [GD_TOSHIBA]
+
+search_part()
+Disk /dev/sdc - 15 GB / 14 GiB - CHS 14782 64 32
+FAT32 at 0/1/32
+FAT1 : 32-14807
+FAT2 : 14808-29583
+start_rootdir : 29584 root cluster : 2
+Data : 29584-30274207
+sectors : 30274209
+cluster_size : 16
+no_of_cluster : 1890289 (2 - 1890290)
+fat_length 14776 calculated 14768
+FAT differs, FAT sectors=0-16/14776
+heads/cylinder 32 (FAT) != 64 (HD)
+sect/track 63 (FAT) != 32 (HD)
+
+FAT32 at 0/1/32
+     FAT32 LBA                0   1 32 14782  22 32   30274209 [GD_TOSHIBA]
+     FAT32, blocksize=8192, 15 GB / 14 GiB
+Warning: the current number of heads per cylinder is 64 but the correct value may be 255.
+
+Results
+   L FAT32 LBA                0   1 32 14782  22 32   30274209 [GD_TOSHIBA]
+     FAT32, blocksize=8192, 15 GB / 14 GiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 30274209 linear /dev/sdc 63" | dmsetup create test0
+
+
+dir_partition inode=0
+   L FAT32 LBA                0   1 32 14782  22 32   30274209 [GD_TOSHIBA]
+     FAT32, blocksize=8192, 15 GB / 14 GiB
+FAT: cluster=2(0x2), pos=29647
+Directory /
+       3 drwxr-xr-x     0      0         0  5-Oct-2016 14:07 System Volume Information
+  217686 -rwxr-xr-x     0      0    186165 21-Jul-2018 13:57 Lalbazar Kolkata Police all building IP  Details..xlsx
+       5 drwxr-xr-x     0      0         0 27-Sep-2018 17:30 FOUND.000
+X  21101 -rwxr-xr-x     0      0       165 21-Sep-2018 05:21 ~$Lalbazar Kolkata Police all building IP  Details..
+X 107521 drwxr-xr-x     0      0         0 11-Mar-2016 18:57 _EAMVI~1
+X 108420 drwxr-xr-x     0      0         0 11-Mar-2016 18:57 Utility
+X 132062 drwxr-xr-x     0      0         0  4-Oct-2016 17:22 Ziping
+X 133390 -rwxr-xr-x     0      0   4877310 25-Feb-2007 03:50 BANGLAWORD190.EXE
+X   2914 drwxr-xr-x     0      0      8192  4-Oct-2016 16:38 Adobe Acrobat 6.0 Professional
+X  26011 drwxr-xr-x     0      0      8192  4-Oct-2016 16:38 Adobe PageMaker 7.0
+X 172908 drwxr-xr-x     0      0         0  4-Oct-2016 16:38 Adobe Photoshop 7.0
+X 193593 drwxr-xr-x     0      0         0  4-Oct-2016 16:41 Bengali Software
+X  21078 drwxr-xr-x     0      0      8192  4-Oct-2016 16:42 Crystal Report 8
+X 268608 drwxr-xr-x     0      0         0  4-Oct-2016 16:42 Cute pdf
+  269747 drwxr-xr-x     0      0         0  4-Oct-2016 17:01 NERO 7 Essentials
+X  20431 drwxr-xr-x     0      0      8192  4-Oct-2016 17:01 NITRO PDF
+  353882 drwxr-xr-x     0      0         0  4-Oct-2016 16:46 Oracle Developer 6i
+  440435 drwxr-xr-x     0      0         0  4-Oct-2016 17:21 Tera Copy
+X  47446 drwxr-xr-x     0      0      8192  4-Oct-2016 17:22 _B-6
+    8897 drwxr-xr-x     0      0         0 30-Dec-2017 21:37 LOST.DIR
+X   9301 drwxr-xr-x     0      0      8192  1-Jan-1980 00:00 _PSCANS
+ 1835010 drwxr-xr-x     0      0         0  4-Oct-2016 15:47 Digital_MTO(Bill)
+    2849 drwxr-xr-x     0      0         0 24-Apr-2018 16:15 Android
+X      0 -rwxr-xr-x     0      0         0  7-Nov-2016 14:19 application f
+X1835073 -rwxr-xr-x     0      0     15360  7-Nov-2016 14:19 _WRD0003.TMP
+X     65 -rwxr-xr-x     0      0     15360  7-Nov-2016 14:19 application for release from c.cell.doc
+X      0 -rwxr-xr-x     0      0         0  7-Nov-2016 14:19 application for release from c.cell.doc
+X1835073 -rwxr-xr-x     0      0     23040  7-Nov-2016 14:19 _WRD0005.TMP
+X1835073 -rwxr-xr-x     0      0     23040  7-Nov-2016 14:19 application for release from c.cell.doc
+X     79 drwxr-xr-x     0      0      8192  7-Nov-2016 07:14 KPPIS & KPT
+X 524290 -rwxr-xr-x     0      0     24064  7-Nov-2016 19:33 _WRD0000.TMP
+X     65 -rwxr-xr-x     0      0     23040  7-Nov-2016 14:19 _WRL0001.TMP
+X 524290 -rwxr-xr-x     0      0     24064  7-Nov-2016 19:33 application for release from c.cell.doc
+X 524293 -rwxr-xr-x     0      0     24064  7-Nov-2016 19:35 _WRD0002.TMP
+X      2 -rwxr-xr-x     0      0     24064  7-Nov-2016 19:33 _WRL0003.TMP
+X 524293 -rwxr-xr-x     0      0     24064  7-Nov-2016 19:35 application for release from c.cell.doc
+X 524290 -rwxr-xr-x     0      0     24064  8-Nov-2016 11:02 _WRD0000.TMP
+X      5 -rwxr-xr-x     0      0     24064  7-Nov-2016 19:35 _WRL0001.TMP
+  524290 -rwxr-xr-x     0      0     24064  8-Nov-2016 11:02 application for release from c.cell.doc
+  524291 drwxr-xr-x     0      0         0  4-Oct-2016 16:39 apex_4.2.4_en
+X      2 -rwxr-xr-x     0      0 630783574 28-Nov-2016 01:03 Dear_Zindagi_2016.mp4
+X  14191 drwxr-xr-x     0      0      8192  4-Mar-2015 17:53 _01MSDCF
+X   1036 drwxr-xr-x     0      0      8192  4-Mar-2015 17:53 _CIM
+X      0 -rwxr-xr-x     0      0         0 22-Jan-2017 15:10 g de.jpg
+X 669551 -rwxr-xr-x     0      0      1775 22-Jan-2017 15:10 g de.jpg.crdownload
+  669551 -rwxr-xr-x     0      0      1775 22-Jan-2017 15:10 g de.jpg
+X 983042 -rwxr-xr-x     0      0 1250899338  8-Jul-2016 22:07 Sanam Teri Kasam 2016  720p Hindi DvDRip x264 AAC-TaRa.mkv
+X  21628 drwxr-xr-x     0      0      8192  1-Sep-2016 13:00 _RAKTON
+X      2 drwxr-xr-x     0      0      8192  8-Feb-2017 00:11 _RKO
+X   1038 -rwxr-xr-x     0      0 605537402  7-Feb-2017 22:44 Coffee_With_D.mp4
+X      2 -rwxr-xr-x     0      0 1250899338  8-Jul-2016 22:07 Sanam Teri Kasam 2016.mkv
+  669552 drwxr-xr-x     0      0         0  4-Oct-2016 17:21 Toad
+X 674589 drwxr-xr-x     0      0         0 21-Jun-2017 14:41 New folder
+X 674589 drwxr-xr-x     0      0         0  1-Jan-2018 21:28 _ADAK
+  686065 -rwxr-xr-x     0      0   2605808 20-Jun-2017 14:39 MEMORABILIA 1.jpg
+  686384 -rwxr-xr-x     0      0    824485 20-Jun-2017 14:57 01.JPG
+X 686485 drwxr-xr-x     0      0         0 30-Dec-2017 22:03 New folder
+X1000538 -rwxr-xr-x     0      0  15912202  6-Aug-2017 23:35 Universal_Adb_Driver_sDB.zip
+X1002481 -rwxr-xr-x     0      0  36248004  6-Aug-2017 23:35 All MTK USB Driverv.9.2.PDanet.Adb 2015.zip
+X1006906 -rwxr-xr-x     0      0    521101  6-Aug-2017 23:34 mobilego_setup_full818.zip
+X1006970 drwxr-xr-x     0      0         0  6-Aug-2017 23:40 New folder (2)
+X  23930 drwxr-xr-x     0      0      8192  6-Aug-2017 23:40 _255
+ 1007085 drwxr-xr-x     0      0         0  6-Sep-2017 00:09 Software
+X1064147 drwxr-xr-x     0      0         0 16-Sep-2017 16:11 New folder (2)
+ 1064147 drwxr-xr-x     0      0         0 16-Sep-2017 16:11 TRG
+ 1377195 -rwxr-xr-x     0      0  44860208 25-Sep-2017 15:39 Firefox Setup 47.0.exe
+  686485 drwxr-xr-x     0      0         0 31-Dec-2017 12:53 Converter
+  695022 drwxr-xr-x     0      0         0 31-Dec-2017 12:56 DTS for remote users
+X  23942 drwxr-xr-x     0      0      8192 31-Dec-2017 12:57 _TO
+ 1859029 drwxr-xr-x     0      0         0 31-Dec-2017 13:04 Player
+ 1859213 -rwxr-xr-x     0      0  47248040 25-Sep-2017 14:55 Firefox Setup 51.0.exe
+ 1864981 -rwxr-xr-x     0      0       253 26-Nov-2015 11:45 TNSNAMES.ORA
+  674701 drwxr-xr-x     0      0         0 12-Mar-2018 20:14 RRB GR D
+  674759 drwxr-xr-x     0      0         0 14-Mar-2018 18:07 whatssapp pic
+  674943 -rwxr-xr-x     0      0     21307 27-Mar-2018 17:07 (1) MRP & SALE RATE ) MARCH-2018.pdf
+X  19586 drwxr-xr-x     0      0     24576 30-Apr-2018 21:07 _RIVATE
+X  33586 -rwxr-xr-x     0      0 943404268 22-Mar-2018 17:39 Raid.mkv
+X   6594 -rwxr-xr-x     0      0 732158905 15-Mar-2018 03:53 Hate Story 4.mkv
+X  30433 -rwxr-xr-x     0      0 2698893891  5-Feb-2018 23:25 Yeti Obhijaan 2017 Bengali.mkv
+X      2 -rwxr-xr-x     0      0         6 22-Apr-2018 00:49 _INS901X.TMP
+X      2 -rwxr-xr-x     0      0         6 22-Apr-2018 00:49 _INS901X.TMP
+X      2 drwxr-xr-x     0      0      8192 21-Apr-2018 12:45 New folder
+X 724713 drwxr-xr-x     0      0         0 21-Apr-2018 12:57 New folder (2)
+X   3817 drwxr-xr-x     0      0      8192 21-Apr-2018 12:57 Picture
+  720899 drwxr-xr-x     0      0         0 21-Apr-2018 14:34 APK
+X   2267 drwxr-xr-x     0      0      8192 13-Apr-2018 12:50 Server Duty
+X   2636 drwxr-xr-x     0      0      8192 21-Apr-2018 14:29 Web update April-18
+  951090 -rwxr-xr-x     0      0 926310081 24-Apr-2018 00:09 Paying Guests.mp4
+X      2 -rwxr-xr-x     0      0 836547767  2-Jul-2018 14:14 _ANJU.MKV
+X  36584 -rwxr-xr-x     0      0 2064396881 11-Jun-2018 21:06 Vikram.Vedha.2018.mp4
+X   5638 -rwxr-xr-x     0      0 734333918 25-Jun-2018 16:26 Lust Stories.mkv
+X  21078 -rwxr-xr-x     0      0 1256824007  7-Jul-2018 21:24 Incredible 2.mkv
+X     17 -rwxr-xr-x     0      0     96256  1-Feb-2014 21:50 Files.exe
+      29 -rwxr-xr-x     0      0     96256  1-Feb-2014 21:50 www.cricketscore.com
+      41 drwxr-xr-x     0      0         0 15-Sep-2018 16:31  
+    6003 drwxr-xr-x     0      0         0  8-May-2018 17:51 New folder
+   37152 drwxr-xr-x     0      0         0 15-Sep-2018 16:35 Forti Client
+   37165 drwxr-xr-x     0      0         0 15-Sep-2018 16:35 morningreport
+   37178 drwxr-xr-x     0      0         0 15-Sep-2018 16:35 OFFICE 2007
+   37191 drwxr-xr-x     0      0         0 15-Sep-2018 16:35 Team Viewer 9 for PS
+   37204 drwxr-xr-x     0      0         0 15-Sep-2018 16:35 Utility
+   37217 drwxr-xr-x     0      0         0 15-Sep-2018 16:35 Ziping
+   37230 drwxr-xr-x     0      0         0 15-Sep-2018 16:35 Adobe Photoshop 7.0
+   37243 drwxr-xr-x     0      0         0 15-Sep-2018 16:35 Bengali Software
+   37256 drwxr-xr-x     0      0         0 15-Sep-2018 16:35 Cute pdf
+  133986 drwxr-xr-x     0      0         0 29-May-2018 19:45 Forticlient for Windows 7+8.1+10
+add_ext_part_i386: max
+add_ext_part_i386: min
+
+interface_write()
+ 1 E extended LBA             0   1  1 14782  22 32   30274240
+ 5 L FAT32 LBA                0   1 32 14782  22 32   30274209 [GD_TOSHIBA]
+write!
+
+write_mbr_i386: starting...
+Store new MBR code
+write_all_log_i386: starting...
+write_all_log_i386: CHS: 0/1/1,lba=32
+You will have to reboot for the change to take effect.
+
+TestDisk exited normally.
