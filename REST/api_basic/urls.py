@@ -6,3 +6,4 @@ urlpatterns = [
 	path('detail/<int:pk>/',article_detail)
 		
 ]
+
