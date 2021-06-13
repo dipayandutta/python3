@@ -21,6 +21,12 @@ for generic based view
 '''
 from rest_framework import generics
 from rest_framework import mixins
+
+'''
+	for Authentication
+'''
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication, TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 '''
 	Example of Class Based View
@@ -30,6 +36,7 @@ class GenericAPIListall(generics.GenericAPIView,mixins.ListModelMixin):
 
 	serializer_class = ArticleSerializer
 	queryset = Article.objects.all()
+
 
 	def get(self,request):
 		return self.list(request)
@@ -43,6 +50,16 @@ class GenericAPIView(generics.GenericAPIView,mixins.ListModelMixin,mixins.Create
 
 	lookup_field = 'id' # required for update the data put method
 
+	'''
+	Adding authentication
+	'''
+	#authentication_classes = [SessionAuthentication,BasicAuthentication]
+	#permission_class = [IsAuthenticated]
+
+	authentication_classes = [TokenAuthentication]
+	permission_class = [IsAuthenticated]
+
+
 	def get(self,request,id):
 		if id:
 			return self.retrieve(request)
@@ -51,8 +68,8 @@ class GenericAPIView(generics.GenericAPIView,mixins.ListModelMixin,mixins.Create
 
 	# For Posting Data
 
-	def post(self,request):
-		return self.create(request)
+	def post(self,request,id=None):
+		return self.create(request,id)
 
 	# For updating data
 	def put(self,request,id=None):
