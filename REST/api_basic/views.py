@@ -27,7 +27,11 @@ from rest_framework import mixins
 '''
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication, TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+
+
 # Create your views here.
+
+
 '''
 	Example of Class Based View
 '''
