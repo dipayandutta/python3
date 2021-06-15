@@ -25,7 +25,7 @@
 
 .login #container {
     background: var(--body-bg);
-    border: 1px solid var(--hairline-color);
+    border: 10px solid var(--hairline-color);
     border-radius: 4px;
     overflow: hidden;
     width: 28em;
@@ -58,3 +58,4 @@
 .login .password-reset-link {
     text-align: center;
 }
+
