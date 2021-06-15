@@ -5,9 +5,9 @@ from .models import post,Category
 class BlogAdminArea(admin.AdminSite):
 	site_header = 'Blog Admin Area'
 
-#blog_site = BlogAdminArea(name='Blog Admin')
+blog_site = BlogAdminArea(name='Blog Admin')
 
-#blog_site.register(post)
+blog_site.register(post)
 
 TEXT = 'Some Text I Write'
 
