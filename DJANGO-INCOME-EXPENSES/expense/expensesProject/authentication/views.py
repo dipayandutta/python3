@@ -181,4 +181,8 @@ class LoginView(View):
 
 
 
-
+class LogoutView(View):
+	def post(self,request):
+		auth.logout(request)
+		messages.success(request,'Successfully Logged Out!')
+		return redirect('login')
